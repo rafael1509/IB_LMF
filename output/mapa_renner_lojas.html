@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6f45e9e6bdc393b8994c789909c4550b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 50px; left: 50px; z-index:1000; background-color: white; padding: 5px 10px;
+border: 2px solid grey; font-size: 14px; border-radius:5px;">
+&nbsp; Legenda <br>
+&nbsp; 100 Lojas &nbsp; <i class="fa fa-circle" style="color: blue;"></i><br>
+&nbsp; 500 Lojas &nbsp; <i class="fa fa-circle" style="color: blue; width: 30px; height: 30px;"></i><br>
+&nbsp; 1000 Lojas &nbsp; <i class="fa fa-circle" style="color: blue; width: 40px; height: 40px;"></i>
+</div>
+    
+            <div class="folium-map" id="map_6f45e9e6bdc393b8994c789909c4550b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6f45e9e6bdc393b8994c789909c4550b = L.map(
+                "map_6f45e9e6bdc393b8994c789909c4550b",
+                {
+                    center: [-14.235, -51.925],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1aa2136bf86a8cb01ad7c8bb56a56aea = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+            var circle_marker_6cb668db54b3eee344e7f759edafcdff = L.circleMarker(
+                [-9.9765362, -67.8220778],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_34a023ebc1af1fe95a0e1047df4a7df9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9023b129575777eeecfb0316460527d9 = $(`<div id="html_9023b129575777eeecfb0316460527d9" style="width: 100.0%; height: 100.0%;">RIO BRANCO, AC: 1 lojas</div>`)[0];
+                popup_34a023ebc1af1fe95a0e1047df4a7df9.setContent(html_9023b129575777eeecfb0316460527d9);
+            
+        
+
+        circle_marker_6cb668db54b3eee344e7f759edafcdff.bindPopup(popup_34a023ebc1af1fe95a0e1047df4a7df9)
+        ;
+
+        
+    
+    
+            var circle_marker_4872fbf0e531fd2d2bc638925c3c63be = L.circleMarker(
+                [-9.754866, -36.661471],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_b57f5897867b1f3a0482d2d024e457e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af3ce8cf9885d16463da67664e894dcb = $(`<div id="html_af3ce8cf9885d16463da67664e894dcb" style="width: 100.0%; height: 100.0%;">ARAPIRACA, AL: 4 lojas</div>`)[0];
+                popup_b57f5897867b1f3a0482d2d024e457e3.setContent(html_af3ce8cf9885d16463da67664e894dcb);
+            
+        
+
+        circle_marker_4872fbf0e531fd2d2bc638925c3c63be.bindPopup(popup_b57f5897867b1f3a0482d2d024e457e3)
+        ;
+
+        
+    
+    
+            var circle_marker_55442a5cc68259fcb02db2af291ab73b = L.circleMarker(
+                [-3.1316333, -59.9825041],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_15ced2566d6f2c8282f69cd47791d52d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fa241fc0a419e03635572c87dbbfbd8b = $(`<div id="html_fa241fc0a419e03635572c87dbbfbd8b" style="width: 100.0%; height: 100.0%;">MANAUS, AM: 6 lojas</div>`)[0];
+                popup_15ced2566d6f2c8282f69cd47791d52d.setContent(html_fa241fc0a419e03635572c87dbbfbd8b);
+            
+        
+
+        circle_marker_55442a5cc68259fcb02db2af291ab73b.bindPopup(popup_15ced2566d6f2c8282f69cd47791d52d)
+        ;
+
+        
+    
+    
+            var circle_marker_76de3d3280267293006ecf96adc32ce1 = L.circleMarker(
+                [0.0401529, -51.0569588],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_53c20f83f54f05f2d4daf7d70b132c1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d707c587371ca3df023005976e93a95d = $(`<div id="html_d707c587371ca3df023005976e93a95d" style="width: 100.0%; height: 100.0%;">MACAPÁ, AP: 1 lojas</div>`)[0];
+                popup_53c20f83f54f05f2d4daf7d70b132c1b.setContent(html_d707c587371ca3df023005976e93a95d);
+            
+        
+
+        circle_marker_76de3d3280267293006ecf96adc32ce1.bindPopup(popup_53c20f83f54f05f2d4daf7d70b132c1b)
+        ;
+
+        
+    
+    
+            var circle_marker_5f9c6a8a675d343c499ffe8a97392d1d = L.circleMarker(
+                [-12.6998188, -38.3260762],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_d1cdf9b03b0e3f30ac65def4a3537653 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00ccc3403fd7cd52a62e09668ad8a235 = $(`<div id="html_00ccc3403fd7cd52a62e09668ad8a235" style="width: 100.0%; height: 100.0%;">CAMAÇARI, BA: 15 lojas</div>`)[0];
+                popup_d1cdf9b03b0e3f30ac65def4a3537653.setContent(html_00ccc3403fd7cd52a62e09668ad8a235);
+            
+        
+
+        circle_marker_5f9c6a8a675d343c499ffe8a97392d1d.bindPopup(popup_d1cdf9b03b0e3f30ac65def4a3537653)
+        ;
+
+        
+    
+    
+            var circle_marker_0495ac210a8dae2cd5c49db0ee2ab6c8 = L.circleMarker(
+                [-3.8889838, -38.4546585],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_fbca4886029bceb7e668092f49cbf399 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d5a6dc7c7c15cc38d8ebee97c3f687c = $(`<div id="html_7d5a6dc7c7c15cc38d8ebee97c3f687c" style="width: 100.0%; height: 100.0%;">EUSÉBIO, CE: 12 lojas</div>`)[0];
+                popup_fbca4886029bceb7e668092f49cbf399.setContent(html_7d5a6dc7c7c15cc38d8ebee97c3f687c);
+            
+        
+
+        circle_marker_0495ac210a8dae2cd5c49db0ee2ab6c8.bindPopup(popup_fbca4886029bceb7e668092f49cbf399)
+        ;
+
+        
+    
+    
+            var circle_marker_0a76296a80271dd144e4dc8da510efaa = L.circleMarker(
+                [-15.7934036, -47.8823172],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_fc4563ea26582fb4d0d368862c264a30 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e04fccdbb5381f7213788f18a963af7c = $(`<div id="html_e04fccdbb5381f7213788f18a963af7c" style="width: 100.0%; height: 100.0%;">BRASÍLIA, DF: 10 lojas</div>`)[0];
+                popup_fc4563ea26582fb4d0d368862c264a30.setContent(html_e04fccdbb5381f7213788f18a963af7c);
+            
+        
+
+        circle_marker_0a76296a80271dd144e4dc8da510efaa.bindPopup(popup_fc4563ea26582fb4d0d368862c264a30)
+        ;
+
+        
+    
+    
+            var circle_marker_80fb3b6cd5d76f08d5b1374916a20c8a = L.circleMarker(
+                [-20.8375276, -41.16135877415958],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_3c3264aadc89329e8ed5a666940bfbb6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e159e78fce7c402e5ef14a2e61b17f5e = $(`<div id="html_e159e78fce7c402e5ef14a2e61b17f5e" style="width: 100.0%; height: 100.0%;">CACHOEIRO DO ITAPEMIRIM, ES: 9 lojas</div>`)[0];
+                popup_3c3264aadc89329e8ed5a666940bfbb6.setContent(html_e159e78fce7c402e5ef14a2e61b17f5e);
+            
+        
+
+        circle_marker_80fb3b6cd5d76f08d5b1374916a20c8a.bindPopup(popup_3c3264aadc89329e8ed5a666940bfbb6)
+        ;
+
+        
+    
+    
+            var circle_marker_c6e97e604479024dfd7fc68a1e5595ee = L.circleMarker(
+                [-16.3332828, -48.9525756],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_ea22eb4f83d564f5d4b6131bf90e6078 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fdbc841d94fb28bf357b722b62848e3a = $(`<div id="html_fdbc841d94fb28bf357b722b62848e3a" style="width: 100.0%; height: 100.0%;">ANÁPOLIS, GO: 12 lojas</div>`)[0];
+                popup_ea22eb4f83d564f5d4b6131bf90e6078.setContent(html_fdbc841d94fb28bf357b722b62848e3a);
+            
+        
+
+        circle_marker_c6e97e604479024dfd7fc68a1e5595ee.bindPopup(popup_ea22eb4f83d564f5d4b6131bf90e6078)
+        ;
+
+        
+    
+    
+            var circle_marker_2a82f9d4c447bda76bd379bfa7e28cd3 = L.circleMarker(
+                [-5.5269279, -47.478115],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_c0281588a4ffeafa548864c3379654a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a6482cc3f91051505e845cb3d3ca3c9 = $(`<div id="html_7a6482cc3f91051505e845cb3d3ca3c9" style="width: 100.0%; height: 100.0%;">IMPERATRIZ, MA: 6 lojas</div>`)[0];
+                popup_c0281588a4ffeafa548864c3379654a6.setContent(html_7a6482cc3f91051505e845cb3d3ca3c9);
+            
+        
+
+        circle_marker_2a82f9d4c447bda76bd379bfa7e28cd3.bindPopup(popup_c0281588a4ffeafa548864c3379654a6)
+        ;
+
+        
+    
+    
+            var circle_marker_189442ef20eabec9cb695426bafd3ab1 = L.circleMarker(
+                [-21.4297405, -45.9479419],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_6303d19a88b14f795ffe1274e0dc4a07 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34a76300a63963d341c64fbac7e5eaba = $(`<div id="html_34a76300a63963d341c64fbac7e5eaba" style="width: 100.0%; height: 100.0%;">ALFENAS, MG: 34 lojas</div>`)[0];
+                popup_6303d19a88b14f795ffe1274e0dc4a07.setContent(html_34a76300a63963d341c64fbac7e5eaba);
+            
+        
+
+        circle_marker_189442ef20eabec9cb695426bafd3ab1.bindPopup(popup_6303d19a88b14f795ffe1274e0dc4a07)
+        ;
+
+        
+    
+    
+            var circle_marker_e50f5e7bb72ff29e8b21dbb6f75f475d = L.circleMarker(
+                [-20.4640173, -54.6162947],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_8a6dc2a8cade97ee7e6a3c03b5c77869 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25edfb77484aa0b8e0396fad391022ca = $(`<div id="html_25edfb77484aa0b8e0396fad391022ca" style="width: 100.0%; height: 100.0%;">CAMPO GRANDE, MS: 5 lojas</div>`)[0];
+                popup_8a6dc2a8cade97ee7e6a3c03b5c77869.setContent(html_25edfb77484aa0b8e0396fad391022ca);
+            
+        
+
+        circle_marker_e50f5e7bb72ff29e8b21dbb6f75f475d.bindPopup(popup_8a6dc2a8cade97ee7e6a3c03b5c77869)
+        ;
+
+        
+    
+    
+            var circle_marker_9bccc8a85c2ceca6243585de0eb151b9 = L.circleMarker(
+                [-15.5986686, -56.0991301],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_3b2970c252de820848a3304e65367f4b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_abfb611c8b86887eba07b88e25380477 = $(`<div id="html_abfb611c8b86887eba07b88e25380477" style="width: 100.0%; height: 100.0%;">CUIABÁ, MT: 7 lojas</div>`)[0];
+                popup_3b2970c252de820848a3304e65367f4b.setContent(html_abfb611c8b86887eba07b88e25380477);
+            
+        
+
+        circle_marker_9bccc8a85c2ceca6243585de0eb151b9.bindPopup(popup_3b2970c252de820848a3304e65367f4b)
+        ;
+
+        
+    
+    
+            var circle_marker_4f8404a29ed34a5c8b9d6d70a318de8b = L.circleMarker(
+                [-1.374035, -48.4016623],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_dde93ae63fd28edd5be92f33f3f73a32 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_093b3ab493926bdf9833b7039ca370fe = $(`<div id="html_093b3ab493926bdf9833b7039ca370fe" style="width: 100.0%; height: 100.0%;">ANANINDEUA, PA: 9 lojas</div>`)[0];
+                popup_dde93ae63fd28edd5be92f33f3f73a32.setContent(html_093b3ab493926bdf9833b7039ca370fe);
+            
+        
+
+        circle_marker_4f8404a29ed34a5c8b9d6d70a318de8b.bindPopup(popup_dde93ae63fd28edd5be92f33f3f73a32)
+        ;
+
+        
+    
+    
+            var circle_marker_33852dbc9880c5f3e6a9a1ef9f4b4fdf = L.circleMarker(
+                [-7.2246743, -35.8771292],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_b6565c90a84d372989a19bf930b2efde = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1aee0331e84c9eb2240c325f74fc8a7 = $(`<div id="html_a1aee0331e84c9eb2240c325f74fc8a7" style="width: 100.0%; height: 100.0%;">CAMPINA GRANDE, PB: 3 lojas</div>`)[0];
+                popup_b6565c90a84d372989a19bf930b2efde.setContent(html_a1aee0331e84c9eb2240c325f74fc8a7);
+            
+        
+
+        circle_marker_33852dbc9880c5f3e6a9a1ef9f4b4fdf.bindPopup(popup_b6565c90a84d372989a19bf930b2efde)
+        ;
+
+        
+    
+    
+            var circle_marker_f855fbdc1d89de71694c887f33f813e8 = L.circleMarker(
+                [-8.0213832, -34.9810768],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_f02e10d33654e7e03895b95a73f30e4b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ebb0a73bf73a5169db591c4142b44981 = $(`<div id="html_ebb0a73bf73a5169db591c4142b44981" style="width: 100.0%; height: 100.0%;">CAMARAGIBE, PE: 11 lojas</div>`)[0];
+                popup_f02e10d33654e7e03895b95a73f30e4b.setContent(html_ebb0a73bf73a5169db591c4142b44981);
+            
+        
+
+        circle_marker_f855fbdc1d89de71694c887f33f813e8.bindPopup(popup_f02e10d33654e7e03895b95a73f30e4b)
+        ;
+
+        
+    
+    
+            var circle_marker_c9977f5bda37d36eaf8ce980f2c2b682 = L.circleMarker(
+                [-2.9147515, -41.7661953],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_2e05f9400be84847ceabd35c7910a67d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db60586e6f8ad8a2352c81452799ec8a = $(`<div id="html_db60586e6f8ad8a2352c81452799ec8a" style="width: 100.0%; height: 100.0%;">PARNAÍBA, PI: 4 lojas</div>`)[0];
+                popup_2e05f9400be84847ceabd35c7910a67d.setContent(html_db60586e6f8ad8a2352c81452799ec8a);
+            
+        
+
+        circle_marker_c9977f5bda37d36eaf8ce980f2c2b682.bindPopup(popup_2e05f9400be84847ceabd35c7910a67d)
+        ;
+
+        
+    
+    
+            var circle_marker_9de2c6f3222c484bf82bf70027464d80 = L.circleMarker(
+                [-24.9554996, -53.4560544],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_ebecf62a59bcf7a87d33a11980ea71bc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_38eadfe40f56511738bd009fc7dad844 = $(`<div id="html_38eadfe40f56511738bd009fc7dad844" style="width: 100.0%; height: 100.0%;">CASCAVEL, PR: 23 lojas</div>`)[0];
+                popup_ebecf62a59bcf7a87d33a11980ea71bc.setContent(html_38eadfe40f56511738bd009fc7dad844);
+            
+        
+
+        circle_marker_9de2c6f3222c484bf82bf70027464d80.bindPopup(popup_ebecf62a59bcf7a87d33a11980ea71bc)
+        ;
+
+        
+    
+    
+            var circle_marker_90ee802a7e32b01337d217c858892322 = L.circleMarker(
+                [-23.155540549999998, -44.23448088153183],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_621831b81994908633b60a13c78ed3a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_440e02524a641fcb19a74ffb4b4a1f97 = $(`<div id="html_440e02524a641fcb19a74ffb4b4a1f97" style="width: 100.0%; height: 100.0%;">ANGRA DOS REIS, RJ: 44 lojas</div>`)[0];
+                popup_621831b81994908633b60a13c78ed3a7.setContent(html_440e02524a641fcb19a74ffb4b4a1f97);
+            
+        
+
+        circle_marker_90ee802a7e32b01337d217c858892322.bindPopup(popup_621831b81994908633b60a13c78ed3a7)
+        ;
+
+        
+    
+    
+            var circle_marker_19171e2eafefdf8ee6d9d288663bb782 = L.circleMarker(
+                [-5.1904332, -37.3443872],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_6b7ce6f1a5fd1bdf5883c554c975375e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a18a9c9c69fb47c89dd49b56982ad80 = $(`<div id="html_8a18a9c9c69fb47c89dd49b56982ad80" style="width: 100.0%; height: 100.0%;">MOSSORÓ, RN: 4 lojas</div>`)[0];
+                popup_6b7ce6f1a5fd1bdf5883c554c975375e.setContent(html_8a18a9c9c69fb47c89dd49b56982ad80);
+            
+        
+
+        circle_marker_19171e2eafefdf8ee6d9d288663bb782.bindPopup(popup_6b7ce6f1a5fd1bdf5883c554c975375e)
+        ;
+
+        
+    
+    
+            var circle_marker_35aacb2d30050a518f4c3b4bbc5e8dc5 = L.circleMarker(
+                [-11.4333, -61.4420502],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_7da9e7772009e878f7b4856750f27d04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2b9357368e0c7eb19d3c5817c7368877 = $(`<div id="html_2b9357368e0c7eb19d3c5817c7368877" style="width: 100.0%; height: 100.0%;">CACOAL, RO: 2 lojas</div>`)[0];
+                popup_7da9e7772009e878f7b4856750f27d04.setContent(html_2b9357368e0c7eb19d3c5817c7368877);
+            
+        
+
+        circle_marker_35aacb2d30050a518f4c3b4bbc5e8dc5.bindPopup(popup_7da9e7772009e878f7b4856750f27d04)
+        ;
+
+        
+    
+    
+            var circle_marker_d0d162b3e6d05edd84b3e51ca42206c0 = L.circleMarker(
+                [2.8208478, -60.6719582],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_596d156479a92b37b71759e4d8833cc6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd2fe16479f0b2a245424ae119261b17 = $(`<div id="html_bd2fe16479f0b2a245424ae119261b17" style="width: 100.0%; height: 100.0%;">BOA VISTA, RR: 2 lojas</div>`)[0];
+                popup_596d156479a92b37b71759e4d8833cc6.setContent(html_bd2fe16479f0b2a245424ae119261b17);
+            
+        
+
+        circle_marker_d0d162b3e6d05edd84b3e51ca42206c0.bindPopup(popup_596d156479a92b37b71759e4d8833cc6)
+        ;
+
+        
+    
+    
+            var circle_marker_cfc422d78033d85bdf97dfc9c1ffdfe5 = L.circleMarker(
+                [-29.790166, -55.794862],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_edb44550c290ad52eaac65bad56cdfa3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb4b9c8b19c38392b0776275f0f9d43d = $(`<div id="html_bb4b9c8b19c38392b0776275f0f9d43d" style="width: 100.0%; height: 100.0%;">ALEGRETE, RS: 59 lojas</div>`)[0];
+                popup_edb44550c290ad52eaac65bad56cdfa3.setContent(html_bb4b9c8b19c38392b0776275f0f9d43d);
+            
+        
+
+        circle_marker_cfc422d78033d85bdf97dfc9c1ffdfe5.bindPopup(popup_edb44550c290ad52eaac65bad56cdfa3)
+        ;
+
+        
+    
+    
+            var circle_marker_56cbce8fa46aff47d7c3c4a095726074 = L.circleMarker(
+                [-26.9924395, -48.6339782],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_9bee41392c21fc1cc772dd6c5ae9bbd1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21ee59154e671b2180f6160c72f1fc0e = $(`<div id="html_21ee59154e671b2180f6160c72f1fc0e" style="width: 100.0%; height: 100.0%;">BALNEÁRIO CAMBORIÚ, SC: 21 lojas</div>`)[0];
+                popup_9bee41392c21fc1cc772dd6c5ae9bbd1.setContent(html_21ee59154e671b2180f6160c72f1fc0e);
+            
+        
+
+        circle_marker_56cbce8fa46aff47d7c3c4a095726074.bindPopup(popup_9bee41392c21fc1cc772dd6c5ae9bbd1)
+        ;
+
+        
+    
+    
+            var circle_marker_74f3c1d969ea429f4c8491a7b2079eba = L.circleMarker(
+                [-10.9162061, -37.0774655],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_1262bb07b84026e67ae0f44945144f3c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d9a1ebe526487a82e153fa2c9a68ff5 = $(`<div id="html_0d9a1ebe526487a82e153fa2c9a68ff5" style="width: 100.0%; height: 100.0%;">ARACAJU, SE: 3 lojas</div>`)[0];
+                popup_1262bb07b84026e67ae0f44945144f3c.setContent(html_0d9a1ebe526487a82e153fa2c9a68ff5);
+            
+        
+
+        circle_marker_74f3c1d969ea429f4c8491a7b2079eba.bindPopup(popup_1262bb07b84026e67ae0f44945144f3c)
+        ;
+
+        
+    
+    
+            var circle_marker_210277124d8ca2a0278027c84e28b241 = L.circleMarker(
+                [-21.7886713, -48.1773096],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 62.0, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_5cf772468bbef034c3a979c93627e4c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85dfad120297f24db60dcdddbd14f0aa = $(`<div id="html_85dfad120297f24db60dcdddbd14f0aa" style="width: 100.0%; height: 100.0%;">ARARAQUARA, SP: 124 lojas</div>`)[0];
+                popup_5cf772468bbef034c3a979c93627e4c5.setContent(html_85dfad120297f24db60dcdddbd14f0aa);
+            
+        
+
+        circle_marker_210277124d8ca2a0278027c84e28b241.bindPopup(popup_5cf772468bbef034c3a979c93627e4c5)
+        ;
+
+        
+    
+    
+            var circle_marker_a49f9c729940bcf09e455160b27ad87f = L.circleMarker(
+                [-10.1837852, -48.3336423],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5, "stroke": true, "weight": 3}
+            ).addTo(map_6f45e9e6bdc393b8994c789909c4550b);
+        
+    
+        var popup_46d9257eb793179a938cd3f8c6455636 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d0d20bc3ad58c5b5ad3e7a3e4a85939 = $(`<div id="html_4d0d20bc3ad58c5b5ad3e7a3e4a85939" style="width: 100.0%; height: 100.0%;">PALMAS, TO: 1 lojas</div>`)[0];
+                popup_46d9257eb793179a938cd3f8c6455636.setContent(html_4d0d20bc3ad58c5b5ad3e7a3e4a85939);
+            
+        
+
+        circle_marker_a49f9c729940bcf09e455160b27ad87f.bindPopup(popup_46d9257eb793179a938cd3f8c6455636)
+        ;
+
+        
+    
+</script>
+</html>
